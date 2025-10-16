@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    background: none;
+    color: #2f2f2f;
+}
+
+video#bg-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body::before{
+    content: "";
+    display: block;
+    height: 50px;
+}
+
+body::after{
+    content: "";
+    display: block;
+    height: 50px;
+}
+
+.form-container{
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px 35px;
+    border-radius: 12px;
+    border: 2px solid rgba(198, 167, 104, 0.6);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    width: 66%;
+    max-width: 740px;
+    min-width: 320px;
+    margin: 50px auto;
+    z-index: 1;
+    backdrop-filter: blur(6px);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    color: #3e2b1a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+fieldset{
+    border: 1px solid #c6a768;
+    border-radius: 10px;
+    padding: 20px;
+    background: rgba(255, 250, 240, 0.9);
+}
+
+legend{
+    color: #3e2b1a;
+    font-weight: bold;
+}
+
+form input{
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid rgb(245,194,84);
+    font-size: 1rem;
+}
+
+form h2{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+form button{
+    padding: 10px;
+    background: rgb(219, 152, 6);
+    border: 0;
+    outline: none;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 550;
+    color: #fff;
+    border-radius: 4px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"] {
+    width: 100%;
+    max-width: 300px fit-content;
+    color: #2f2f2f;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgb(245,194,84);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="radio"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgb(245, 194, 84);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    vertical-align: middle;
+    background-color: #fff;
+    transform: translateY(4px);
+}
+
+input[type="radio"]:hover{
+    box-shadow: 0 0 10px rgba(50, 37, 7, 0.6);
+}
+
+input[type="radio"]:checked{
+    border: 1px solid rgb(245, 194, 84);
+    background-color: rgb(245, 194, 84);
+}
+
+.radio-group label{
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #edb200;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover{
+    background-color: #d1aa4c;
+}
+
+#bg-video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    background-size: cover;
+}
+
+button:hover{
+    background-color: #d1aa4c;
+}
+
+@media (max-width: 1024px){
+    .form-container{
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px){
+    .form-container{
+        width: 90%;
+    }
+
+    fieldset{
+        padding: 15px;
+    }
+
+    input, select{
+        font-size: 0.9rem;
+    }
+}
+
+label{
+    font-weight: 500;
+}
+
+input[type="date"]{
+    color: #b88b2d;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(79%) sepia(57%) saturate(354%) hue-rotate(4deg) brightness(97%) contrast(95%);
+  cursor: pointer;
+}
+
+.placeholder-text {
+  top: 0;
+  font-size: 12px;
+  color: #b88b2d;
+  background-color: transparent;
+  padding: 0 6px;
+  transform: translateY(-50%);
+}

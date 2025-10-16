@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.or/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" name="viewport" content="text/html; charset=UTF-8, initial-scale=1.0" />
+        <title>Reservation Hotel Room 230712301</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <video autoplay="autoplay" muted="muted" loop="loop" id="bg-video">
+            <source src="background.mp4" type="video/mp4" />
+        </video>
+        <div class="form-container">
+            <h1><strong>Reservation Hotel Room</strong></h1>
+            <form action="" method="post" enctype="multipart/form-data">
+                <fieldset class="tab20">
+                    <legend>Personal Data</legend>
+                    <div class="form-row">
+                        <input type="text" id="name" name="name" size="20" placeholder="Name" />
+                        <div class="radio-group">
+                            <input type="radio" id="female" name="gender" value="female" />
+                            <label for="female">Female</label>
+                            <input type="radio" id="male" name="gender" value="male" />
+                            <label for="male">Male</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" id="email" name="email" size="20" placeholder="Email Address" />
+                        <input type="text" id="telp" name="telp" size="20" placeholder="Telp Number" />
+                    </div>
+                </fieldset><br/>
+
+                <fieldset class="tab20">
+                    <legend>Reservation Room form</legend>
+                    <div class="form-row">
+                        <input type="text" id="reserveName" name="reserveName" size="20" placeholder="Reservation Name" />
+                    </div>
+                    <div class="form-row">
+                        <span class="placeholder-text">Booking Date</span>
+                        <input type="date" id="booking" name="booking" required="required"/>
+                    </div>
+                    <div class="form-row">
+                        <span class="placeholder-text">Room Type</span>
+                        <select id="room" name="room" >
+                            <option value="deluxe">Deluxe</option>
+                            <option value="superior">Superior</option>
+                            <option value="junior">Junior</option>
+                            <option value="suite">Suite</option>
+                        </select>
+                        <span class="placeholder-text">Bed Type</span>
+                        <select id="bed" name="bed" >
+                            <option value="single">Single</option>
+                            <option value="double">Double</option>
+                            <option value="queen">Queen</option>
+                            <option value="king">King</option>
+                        </select>
+                    </div> <br/>
+                    <div class="radio-group">
+                        <input type="radio" id="with" name="breakfast" value="with" />
+                        <label for="with">With Breakfast</label>
+                        <input type="radio" id="without" name="breakfast" value="without" />
+                        <label for="without">Without Breakfast</label>
+                    </div>
+                </fieldset><br/>
+
+                <fieldset class="tab20">
+                    <legend>Payment</legend>
+                    <div class="form-row">
+                        <span class="placeholder-text">Check in</span>
+                        <input type="date" id="checkin" name="checkin" size="20" />
+                        <span class="placeholder-text">Check out</span>
+                        <input type="date" id="checkout" name="checkout" size="20" />
+                    </div>
+                    <div class="form-row">
+                        <span class="placeholder-text">Payment Method</span>
+                        <select id="payment" name="payment" size="1">
+                            <option value="cash">Cash</option>
+                            <option value="credit">Credit</option>
+                            <option value="debit">Debit</option>
+                        </select>
+                    </div>
+                </fieldset><br/>
+                <input type="submit" name="simpan" value="Book" />
+            </form>
+        </div>
+        
+        
+    </body>
+</html>
